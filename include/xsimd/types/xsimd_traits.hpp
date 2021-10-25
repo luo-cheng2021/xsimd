@@ -167,7 +167,7 @@ namespace xsimd
         {
         };
 
-#if XSIMD_ENABLE_XTL_COMPLEX
+#ifdef XSIMD_ENABLE_XTL_COMPLEX
         template <class T1, class T2, bool I3EC, class A>
         struct simd_return_type_impl<xtl::xcomplex<T1, T1, I3EC>, T2, A>
             : std::enable_if<simd_condition<T1, T2>::value, batch<std::complex<T2>, A>>
